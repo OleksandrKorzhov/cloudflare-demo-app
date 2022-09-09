@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const handleInvokeFunctionClick = async () => {
-    const response = await fetch('/test');
+    const response = await fetch('/api/test');
     const body = await response.json();
 
     console.log({body});
