@@ -2,6 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const handleInvokeFunctionClick = async () => {
+    const response = await fetch('/test');
+    const body = await response.json();
+
+    console.log({body});
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +24,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleInvokeFunctionClick}>Invoke function</button>
       </header>
     </div>
   );
