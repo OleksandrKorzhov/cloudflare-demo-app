@@ -1,3 +1,5 @@
 export function onRequest(context) {
-  return new Response('Hello world');
+  return new Response({
+    message: 'Hello world'
+  });
 }
